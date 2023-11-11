@@ -1,4 +1,4 @@
-package archivos.main.uber.auxiliares;
+package auxiliares;
 
 public class Empleado {
 

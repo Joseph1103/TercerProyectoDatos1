@@ -1,6 +1,7 @@
 package main;
 
-import archivos.main.uber.auxiliares.Empleado;
+
+import auxiliares.Empleado;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,8 +12,14 @@ import java.net.Socket;
 
 public class Servidor implements Runnable {
 
+    //instancia de server socket
     private ServerSocket serverSocket;
 
+    /**
+     * Constructor del objeto Servidor
+     * Se inicializa el ServerSocket en el puerto 7777
+     * Se inicia un hilo en el propio servidor
+     */
     public Servidor(){
 
         //inicializar el puerto del servidor
@@ -32,8 +39,12 @@ public class Servidor implements Runnable {
 
     }
 
+    /**
+     * Convierte al servidor en un objeto ejecutable
+     * @param args
+     */
     public static void main(String [] args){
-
+        //instancia del servidor
         Servidor servidor = new Servidor();
 
     }
@@ -53,6 +64,7 @@ public class Servidor implements Runnable {
                 //socket que recibe el mensaje
                 Socket socket = serverSocket.accept();
 
+                //deserializar información del socket
                 ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
 
                 //recibir json del cliente
@@ -61,7 +73,7 @@ public class Servidor implements Runnable {
 
                 //convertir json a java
                 ObjectMapper mapper = new ObjectMapper();
-                Empleado empleado = mapper.readValue(jsonString,archivos.main.uber.auxiliares.Empleado.class);
+                Empleado empleado = mapper.readValue(jsonString,Empleado.class);
 
                 System.out.println(empleado.getCarnetUsuario() + "   " + empleado.getPasswordUsuario());
 
