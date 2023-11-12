@@ -1,8 +1,9 @@
 package main;
 
-
 import auxiliares.Empleado;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.xml.bind.JAXBException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -77,6 +78,13 @@ public class Servidor implements Runnable {
 
                 System.out.println(empleado.getCarnetUsuario() + "   " + empleado.getPasswordUsuario());
 
+                String xmlFilePath = "empleado.xml";
+                try {
+                    auxiliares.XMLHandler.marshalToXML(empleado, xmlFilePath);
+                    System.out.println("Empleado stored in XML file: " + xmlFilePath);
+                } catch (JAXBException e) {
+                    e.printStackTrace();
+                }
             }
         }catch (IOException | ClassNotFoundException e){
             e.printStackTrace();

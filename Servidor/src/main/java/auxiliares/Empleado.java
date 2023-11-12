@@ -1,10 +1,15 @@
 package auxiliares;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Empleado {
 
     private String carnetUsuario;
     private String passwordUsuario;
 
+    @XmlElement
     public String getCarnetUsuario() {
         return carnetUsuario;
     }
@@ -13,6 +18,7 @@ public class Empleado {
         this.carnetUsuario = carnetUsuario;
     }
 
+    @XmlElement
     public String getPasswordUsuario() {
         return passwordUsuario;
     }
