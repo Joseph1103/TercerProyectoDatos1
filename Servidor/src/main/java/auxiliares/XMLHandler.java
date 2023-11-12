@@ -1,7 +1,5 @@
 package auxiliares;
 
-import org.w3c.dom.Node;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
