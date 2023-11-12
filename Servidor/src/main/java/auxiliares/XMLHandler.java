@@ -31,7 +31,7 @@ public class XMLHandler {
             marshaller.marshal(wrapper, new File(filePath));
         } catch (JAXBException e) {
             e.printStackTrace();
-            throw e; // Propagate the exception to the caller
+            throw e;
         }
     }
 
