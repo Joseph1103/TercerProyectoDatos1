@@ -1,9 +1,14 @@
 package auxiliares;
 
+import org.w3c.dom.Node;
+
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +45,8 @@ public class XMLHandler {
             JAXBContext context = JAXBContext.newInstance(EmpleadoListWrapper.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
 
-            EmpleadoListWrapper wrapper = (EmpleadoListWrapper) unmarshaller.unmarshal(file);
+            JAXBElement<EmpleadoListWrapper> jaxbElement = unmarshaller.unmarshal(new StreamSource(file), EmpleadoListWrapper.class);
+            EmpleadoListWrapper wrapper = jaxbElement.getValue();
 
             return wrapper.getEmpleados();
         } catch (JAXBException e) {
