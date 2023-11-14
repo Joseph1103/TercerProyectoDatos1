@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<empleado>
+    <carnetUsuario>prueba2</carnetUsuario>
+    <passwordUsuario>contraprueba2</passwordUsuario>
+</empleado>

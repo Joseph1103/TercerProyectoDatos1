@@ -5,9 +5,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Empleado {
-
+    private String accion;
     private String carnetUsuario;
     private String passwordUsuario;
+
+    public String getAccion() {
+        return accion;
+    }
+
+    public void setAccion(String accion) {
+        this.accion = accion;
+    }
 
     @XmlElement
     public String getCarnetUsuario() {
