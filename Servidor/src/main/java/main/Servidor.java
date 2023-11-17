@@ -80,7 +80,7 @@ public class Servidor implements Runnable {
 
                 String xmlFilePath = "empleado.xml";
                 try {
-                    auxiliares.XMLHandler.marshalToXML(empleado, xmlFilePath);
+                    auxiliares.XMLHandler.appendToXML(empleado, xmlFilePath);
                     System.out.println("Empleado stored in XML file: " + xmlFilePath);
                 } catch (JAXBException e) {
                     e.printStackTrace();
