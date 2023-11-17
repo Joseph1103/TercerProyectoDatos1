@@ -25,17 +25,30 @@ public class LoginTask extends AsyncTask<String, Void, String> {
 
     //private CrearUsuarioActivity.AsyncTaskListener listener;
 
-
+    /**
+     * Constructor del objeto
+     * @param callback accion
+     */
     public LoginTask(AsyncTaskCompleteListener callback) {
 
         callBackReference = new WeakReference<>(callback);
 
     }
 
+    /**
+     * Asignar una accion para el server
+     * @param accion accion a tomar
+     */
     public void setAccion(String accion){
         this.accion = accion;
     }
 
+    /**
+     * Realiza una tarea en un hil secundario
+     * @param params The parameters of the task.
+     *
+     * @return devuelve la respuesta del al onPostExecute
+     */
     @Override
     protected String doInBackground(String... params) {
 
@@ -99,8 +112,11 @@ public class LoginTask extends AsyncTask<String, Void, String> {
     }
 
 
-
-    // Este método se llama después de que doInBackground ha terminado
+    /**
+     * Método que es llamado al terminar la ejecución del doInBackGround
+     * @param result The result of the operation computed by {@link #doInBackground}.
+     *
+     */
     @Override
     protected void onPostExecute(String result) {
         // Manejar la respuesta del servidor (puedes actualizar la interfaz de usuario aquí)

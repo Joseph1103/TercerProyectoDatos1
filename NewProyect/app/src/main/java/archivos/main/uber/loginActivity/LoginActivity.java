@@ -14,6 +14,13 @@ import archivos.main.uber.crearUsuarioActivity.CrearUsuarioActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
+    /**
+     * Metodo que se llama al crear la activity
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,17 +32,19 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //informacion del usuario
-    EditText userInfo;
-    EditText passwordInfo;
+    private EditText userInfo;
+    private EditText passwordInfo;
 
-    TextView textPrueba;
+    private TextView textPrueba;
 
     //botones
-    Button botonIniciarSesion;
-    Button botonCrearUsuario;
+    private Button botonIniciarSesion;
+    private Button botonCrearUsuario;
 
 
-
+    /**
+     * carga la información del archivo xml de diseño y asigna funcionamiento a los botones
+     */
     private void elementosApp(){
 
         userInfo = findViewById(R.id.userTextField);
@@ -69,7 +78,9 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    //minimizar la app al presionar el boton de retroceder
+    /**
+     * minimizar la app al presionar el boton de retroceder
+     */
     @Override
     public void onBackPressed() {
 

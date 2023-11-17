@@ -50,8 +50,7 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
     private final CrearUsuarioActivity referenciaPropiaClase = this;
 
     private boolean isBound = false;
-
-    public Handler handler = new Handler(new Handler.Callback() {
+    /*public Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(@NonNull Message msg) {
 
@@ -64,7 +63,7 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
 
             return false;
         }
-    });
+    });*/
 
     /**
      * Método encargado de cargar el diseño de la Activity y diferentes comportamientos
@@ -97,24 +96,6 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
         administrarRegistro();
 
     }
-
-
-    /*private ServiceConnection connection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            SocketServices.LocalBinder binder = (SocketServices.LocalBinder) service;
-            socketServices = binder.getService();
-            socketServices.setHandler(handler);
-            isBound = true;
-
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            isBound = false;
-        }
-    };*/
-
 
     /**
      * Método que asigna un comportamiento al boton de crear usuario y obtiene la información
@@ -199,6 +180,10 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
 
     }
 
+    /**
+     * método que almacena la respuesta del server del LoginTask
+     * @param newValue respuesta del servidor
+     */
     public void onTaskComplete(String newValue) {
 
         prueba = newValue;
@@ -243,6 +228,9 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
 
     }
 
+    /**
+     * Permite recibir y responder mensajes desde otras aplicaciones
+     */
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -257,6 +245,9 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
         }
     };
 
+    /**
+     * Si se esta ejecutando el activity
+     */
     @Override
     protected void onResume() {
 
@@ -266,6 +257,9 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
 
     }
 
+    /**
+     * Si el activity esta en pausa
+     */
     @Override
     protected void onPause() {
 
@@ -274,6 +268,9 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
 
     }
 
+    /**
+     * Si se presiona el boton para retroceder
+     */
     //al presionar el boton para volver, abre el menu principal
     @Override
     public void onBackPressed() {
@@ -288,6 +285,9 @@ public class CrearUsuarioActivity extends AppCompatActivity implements AsyncTask
 
     }
 
+    /**
+     * Si se destruye el activity
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

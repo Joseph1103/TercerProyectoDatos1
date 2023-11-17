@@ -42,6 +42,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private ArrayList<NodoMapa> listaNodos;
 
+    /**
+     * Metodo llamado al crear el activity
+     * @param savedInstanteState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanteState){
 
@@ -56,6 +63,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    /**
+     * Carga el mapa de google maps
+     * @param googleMap mapa de google
+     */
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         //objeto google maps
@@ -86,24 +97,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         LatLng costaRica = new LatLng(9.866519875807688, -83.91721256313163);
         mMap.addMarker(new MarkerOptions().position(costaRica).title("Tiquicia"));
 
-
-        //minimo arriba izquierda 10.034185901361647, -84.26286620316812
-        //minimo abajo derecha 9.817071909307883, -83.88177796487435
-
-
-        /*for (int i = 0; i < 30;i++){
-
-            double muestra1 = generarNumRandom(10.034185901361647,9.817071909307883);
-            double muestra2 = generarNumRandom(-84.26286620316812,-83.88177796487435);
-
-            LatLng prueba = new LatLng(muestra1,muestra2);
-            mMap.addMarker(new MarkerOptions().position(prueba).title("Persona"));
-
-        }*/
-
-        //LatLng prueba = new LatLng(muestra1,muestra2);
-        //mMap.addMarker(new MarkerOptions().position(prueba).title("Persona"));
-
         //accion al presionar un marcador de google maps
         googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
@@ -130,25 +123,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-
-        /*double muestra3 = generarNumRandom(9.893567798775242,9.820504808894489);
-        double muestra4 = generarNumRandom(-83.98034107148003,-83.85296833597823);
-
-        LatLng prueba2 = new LatLng(muestra3,muestra4);
-        mMap.addMarker(new MarkerOptions().position(prueba2).title("Chirig"));*/
-
-        //Log.d("Coordenadas","latitud: " + muestra1 + "  " + "longuitud: " + muestra2);
-        //Log.d("Coordenadas","latitud: " + muestra3 + "  " + "longuitud: " + muestra4);
-
-        /*LatLng start = new LatLng(9.846736526082923, -83.91678990503631);
-        LatLng end = new LatLng(9.85527761099618, -83.88271512378292);
-
-        mMap.addMarker(new MarkerOptions().position(start).title("start"));
-        mMap.addMarker(new MarkerOptions().position(end).title("end"));*/
-
-
     }
 
+    /**
+     * metodo que solicita al servidor la configuración de marcadores
+     */
     private void crearMarcadoresMapa(){
 
         LoginTask loginTask = new LoginTask(referenciaPropiaClase);
@@ -157,6 +136,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    /**
+     * metodo que dibuja los marcadores enviados por el servidor
+     */
     private void generarMarcadores(){
 
         for (int i = 0; i < listaNodos.size();i++){
@@ -169,6 +151,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
+    /**
+     * acción personalizada al presionar el mapa
+     * @param latLng coordenadas latitud,longitud
+     */
     @Override
     public void onMapClick(@NonNull LatLng latLng) {
 
@@ -176,6 +162,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         txtLonguitud.setText(""+latLng.longitude);
     }
 
+    /**
+     * acción personalizada al presionar prolongadamente el mapa
+     * @param latLng coordenadas latitud,longitud
+     */
     @Override
     public void onMapLongClick(@NonNull LatLng latLng) {
 
@@ -184,6 +174,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    /**
+     * Se encarga de manejar la respuesta del servidor y de crear los marcadores
+     * @param result
+     */
     @Override
     public void onTaskComplete(String result) {
         ObjectMapper mapper = new ObjectMapper();
