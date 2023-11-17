@@ -19,14 +19,18 @@ public class NodoMapa implements Serializable {
     public double getLatitud() {
         return latitud;
     }
-
-    public void setLatitud(double latitud) {
-        this.latitud = latitud;
-    }
     /**
      * Establece la latitud del nodo en el mapa.
      *
      * @param latitud La nueva latitud del nodo.
+     */
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
+    }
+    /**
+     * Obtiene la longitud del nodo en el mapa.
+     *
+     * @return La longitud del nodo.
      */
     public double getLongitud() {
         return longitud;
