@@ -12,21 +12,21 @@ public class XMLHandler {
 
     public static void appendToXML(Empleado newEmpleado, String filePath) throws JAXBException {
         File file = new File(filePath);
-        List<Empleado> employees = new ArrayList<>();
+        List<Empleado> employees;
 
         // If the file exists, unmarshal its content into a list
         if (file.exists()) {
             employees = unmarshalListFromXML(filePath);
+        } else {
+            // If the file doesn't exist, create a new list
+            employees = new ArrayList<>();
         }
 
         // Add the new employee to the list
         employees.add(newEmpleado);
 
         // Marshal the updated list to the XML file
-        JAXBContext context = JAXBContext.newInstance(EmpleadoListWrapper.class);
-        Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        marshaller.marshal(new EmpleadoListWrapper(employees), file);
+        marshalListToXML(employees, filePath);
     }
 
     public static List<Empleado> unmarshalListFromXML(String filePath) throws JAXBException {
@@ -34,5 +34,13 @@ public class XMLHandler {
         Unmarshaller unmarshaller = context.createUnmarshaller();
         EmpleadoListWrapper wrapper = (EmpleadoListWrapper) unmarshaller.unmarshal(new File(filePath));
         return wrapper.getEmployees();
+    }
+
+    public static void marshalListToXML(List<Empleado> employees, String filePath) throws JAXBException {
+        File file = new File(filePath);
+        JAXBContext context = JAXBContext.newInstance(EmpleadoListWrapper.class);
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(new EmpleadoListWrapper(employees), file);
     }
 }
