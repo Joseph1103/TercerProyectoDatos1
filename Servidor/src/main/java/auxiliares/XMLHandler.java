@@ -5,35 +5,34 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class XMLHandler {
 
     public static void appendToXML(Empleado newEmpleado, String filePath) throws JAXBException {
         File file = new File(filePath);
-        Empleado existingEmpleado = null;
+        List<Empleado> employees = new ArrayList<>();
 
-        // If the file exists, unmarshal its content into an object
+        // If the file exists, unmarshal its content into a list
         if (file.exists()) {
-            existingEmpleado = unmarshalFromXML(filePath);
-        } else {
-            // If the file doesn't exist, create a new Empleado object
-            existingEmpleado = new Empleado();
+            employees = unmarshalListFromXML(filePath);
         }
 
-        // Add the new data to the existing object
-        existingEmpleado.setCarnetUsuario(newEmpleado.getCarnetUsuario());
-        existingEmpleado.setPasswordUsuario(newEmpleado.getPasswordUsuario());
+        // Add the new employee to the list
+        employees.add(newEmpleado);
 
-        // Marshal the updated object to the XML file
-        JAXBContext context = JAXBContext.newInstance(Empleado.class);
+        // Marshal the updated list to the XML file
+        JAXBContext context = JAXBContext.newInstance(EmpleadoListWrapper.class);
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        marshaller.marshal(existingEmpleado, file);
+        marshaller.marshal(new EmpleadoListWrapper(employees), file);
     }
 
-    public static Empleado unmarshalFromXML(String filePath) throws JAXBException {
-        JAXBContext context = JAXBContext.newInstance(Empleado.class);
+    public static List<Empleado> unmarshalListFromXML(String filePath) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(EmpleadoListWrapper.class);
         Unmarshaller unmarshaller = context.createUnmarshaller();
-        return (Empleado) unmarshaller.unmarshal(new File(filePath));
+        EmpleadoListWrapper wrapper = (EmpleadoListWrapper) unmarshaller.unmarshal(new File(filePath));
+        return wrapper.getEmployees();
     }
 }
