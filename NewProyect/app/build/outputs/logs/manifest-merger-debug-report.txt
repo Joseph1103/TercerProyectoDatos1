@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:2:1-53:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\josth\.gradle\caches\transforms-3\3801bb2ee662426e5389f1d5dff07ce2\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\josth\.gradle\caches\transforms-3\c6baa8aeb33a534f4152f465dad29ce3\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\josth\.gradle\caches\transforms-3\b52eb97f1c8042e594b7eae729dc0352\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -65,9 +65,13 @@ MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\josth\.g
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\josth\.gradle\caches\transforms-3\16a6a26b037c2d947bd50ca92f66bdcb\transformed\play-services-maps-18.2.0\AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:6:5-84
+	android:name
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:6:22-82
 application
-ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:7:5-30:19
-INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:7:5-30:19
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:10:5-51:19
+INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:10:5-51:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\josth\.gradle\caches\transforms-3\3801bb2ee662426e5389f1d5dff07ce2\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\josth\.gradle\caches\transforms-3\3801bb2ee662426e5389f1d5dff07ce2\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\josth\.gradle\caches\transforms-3\c6baa8aeb33a534f4152f465dad29ce3\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -97,45 +101,65 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josth\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\josth\.gradle\caches\transforms-3\d333ff4b3c3f350dac60fc644a50ba15\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:15:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:10:9-54
-	android:roundIcon
 		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:13:9-54
+	android:roundIcon
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:16:9-54
 	tools:targetApi
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:16:9-29
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:19:9-29
 	android:icon
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:14:9-43
 	android:allowBackup
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:15:9-42
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:18:9-42
 	android:dataExtractionRules
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:9:9-65
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:12:9-65
+service#archivos.main.uber.auxiliares.SocketServices
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:21:9-25:11
+	android:enabled
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:24:13-35
+	android:exported
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:23:13-37
+	android:name
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:22:13-54
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:27:9-30:11
+	android:value
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:29:13-68
+	android:name
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:28:13-58
 activity#archivos.main.uber.loginActivity.LoginActivity
-ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:17:9-25:20
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:32:9-40:20
 	android:exported
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:19:13-36
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:34:13-36
 	android:name
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:18:13-56
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:33:13-56
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:38:27-74
 activity#archivos.main.uber.crearUsuarioActivity.CrearUsuarioActivity
-ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:26:9-29:20
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:42:9-45:20
 	android:exported
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:28:13-36
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:44:13-36
 	android:name
-		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:27:13-70
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:43:13-70
+activity#archivos.main.uber.mapActivity.MapsActivity
+ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:47:9-49:20
+	android:exported
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:48:13-36
+	android:name
+		ADDED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml:47:19-59
 uses-sdk
 INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\josth\OneDrive\Escritorio\NewProyect\app\src\main\AndroidManifest.xml

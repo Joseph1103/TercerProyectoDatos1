@@ -3355,6 +3355,7 @@ id listMode
 id list_item
 id loginButton
 id m3_side_sheet
+id mapa
 id marquee
 id masked
 id match_constraint
@@ -3504,6 +3505,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id selectMapUbication
 id select_dialog_listview
 id selected
 id selection_type
@@ -3596,6 +3598,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtLatitud
+id txtLonguitud
 id unchecked
 id uniform
 id unlabeled
@@ -3739,6 +3743,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_crear_usuario
 layout activity_main
+layout activity_maps
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

@@ -1,4 +1,4 @@
-#Thu Nov 09 21:59:49 CST 2023
+#Thu Nov 16 23:19:03 CST 2023
 base.0=C\:\\Users\\josth\\OneDrive\\Escritorio\\NewProyect\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
 base.1=C\:\\Users\\josth\\OneDrive\\Escritorio\\NewProyect\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
 base.2=C\:\\Users\\josth\\OneDrive\\Escritorio\\NewProyect\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\5\\classes.dex
