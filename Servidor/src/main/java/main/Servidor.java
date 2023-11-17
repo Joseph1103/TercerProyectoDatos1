@@ -15,7 +15,9 @@ import java.util.Random;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * La clase Servidor implementa un servidor que maneja conexiones entrantes de dispositivos Android.
+ */
 public class Servidor implements Runnable {
 
     //instancia de server socket
