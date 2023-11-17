@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8999382-3d87-42b7-931a-741617199771" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/src/main/java/auxiliares/XMLHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/src/main/java/auxiliares/XMLHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidor/src/main/java/main/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Servidor/src/main/java/main/Servidor.java" afterDir="false" />
-    </list>
+    <list default="true" id="c8999382-3d87-42b7-931a-741617199771" name="Changes" comment="xml2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,11 +94,24 @@
       <option name="presentableId" value="Default" />
       <updated>1699719268367</updated>
       <workItem from="1699719269597" duration="8221000" />
-      <workItem from="1700231330913" duration="2243000" />
+      <workItem from="1700231330913" duration="2558000" />
     </task>
+    <task id="LOCAL-00001" summary="xml2">
+      <option name="closed" value="true" />
+      <created>1700234703125</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700234703126</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xml2" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml2" />
   </component>
 </project>

@@ -184,7 +184,7 @@ public class Servidor implements Runnable {
                 try {
 
                     //obtiene y guarda el empleado almacenado en el objeto mensaje
-                    auxiliares.XMLHandler.marshalToXML(mensaje.getEmpleado(), xmlFilePath);
+                    auxiliares.XMLHandler.appendToXML(mensaje.getEmpleado(), xmlFilePath);
                     System.out.println("Empleado stored in XML file: " + xmlFilePath);
                 } catch (JAXBException e) {
                     e.printStackTrace();

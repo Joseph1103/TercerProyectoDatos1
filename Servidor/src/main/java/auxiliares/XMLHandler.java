@@ -8,45 +8,32 @@ import java.io.File;
 
 public class XMLHandler {
 
-    public static void marshalToXML(Empleado empleado, String filePath) throws JAXBException {
+    public static void appendToXML(Empleado newEmpleado, String filePath) throws JAXBException {
+        File file = new File(filePath);
+        Empleado existingEmpleado = null;
+
+        // If the file exists, unmarshal its content into an object
+        if (file.exists()) {
+            existingEmpleado = unmarshalFromXML(filePath);
+        } else {
+            // If the file doesn't exist, create a new Empleado object
+            existingEmpleado = new Empleado();
+        }
+
+        // Add the new data to the existing object
+        existingEmpleado.setCarnetUsuario(newEmpleado.getCarnetUsuario());
+        existingEmpleado.setPasswordUsuario(newEmpleado.getPasswordUsuario());
+
+        // Marshal the updated object to the XML file
         JAXBContext context = JAXBContext.newInstance(Empleado.class);
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-        File file = new File(filePath);
-
-        //si ya existe
-        if (file.exists()) {
-
-            //cargar empleados del xml
-            Empleado empleadoNuevo = unmarshalFromXML(filePath);
-
-            //verifica si existe el empleado
-            if (empleadoNuevo != null) {
-                System.out.println("Ya existe el empleado");
-                return;
-
-            }
-
-            marshaller.marshal(empleado,new File(filePath));
-
-
-        }else {
-
-            marshaller.marshal(empleado,new File(filePath));
-
-        }
-
+        marshaller.marshal(existingEmpleado, file);
     }
 
     public static Empleado unmarshalFromXML(String filePath) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance(Empleado.class);
         Unmarshaller unmarshaller = context.createUnmarshaller();
-        try {
-            return (Empleado) unmarshaller.unmarshal(new File(filePath));
-        }catch (Exception e){
-            return null;
-        }
-
+        return (Empleado) unmarshaller.unmarshal(new File(filePath));
     }
 }
