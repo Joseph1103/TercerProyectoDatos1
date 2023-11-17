@@ -8,6 +8,8 @@ public class Empleado {
 
     private String carnetUsuario;
     private String passwordUsuario;
+    private String latitud;
+    private String longitud;
 
     @XmlElement
     public String getCarnetUsuario() {
@@ -25,5 +27,21 @@ public class Empleado {
 
     public void setPasswordUsuario(String passwordUsuario) {
         this.passwordUsuario = passwordUsuario;
+    }
+
+    public String getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(String latitud) {
+        this.latitud = latitud;
+    }
+
+    public String getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(String longitud) {
+        this.longitud = longitud;
     }
 }

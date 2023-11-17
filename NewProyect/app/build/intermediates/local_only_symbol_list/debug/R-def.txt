@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id botonRegistrarUsuario
+id buttonRegistrarUsuario
+id crearContraField
+id crearUsuarioButton
+id crearUsuarioField
+id loginButton
+id passwordTextField
+id passwordTextView
+id pruebaText
+id textView1
+id textView2
+id textView3
+id textView4
+id userTextField
+id userTextView
+layout activity_crear_usuario
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Uber
+style Theme.Uber
+xml backup_rules
+xml data_extraction_rules
